@@ -1,4 +1,4 @@
-// Make it so liri.js can take in one of the following commands:
+// Make it so liri.js can take in all of the following commands:
 // 1. my-tweets
 // 2. spotify-this-song
 // 3. movie-this
