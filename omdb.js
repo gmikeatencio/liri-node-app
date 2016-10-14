@@ -12,3 +12,22 @@
 // 				9. Rotten Tomatoes URL.
 // 				10. If the user doesn't type a movie in, 
 //				the program will output data for the movie 'Mr. Nobody.'
+// var tit = "basketball";
+// var url = "http://www.omdb.com/?t=" + tit + "&y=&plot=short&r=json"
+
+// var request = require('request');
+// request.get(url, function (error, response, body) {
+//   if (!error && response.statusCode == 200) {
+//     // Show the HTML for the Google homepage.
+//     console.log(body) 
+//   }
+// })
+var omdbApi = require('omdb-client');
+ 
+var params = {
+    query: 'Terminator',
+    year: 2012
+}
+omdbApi.get(params, function(err, data) {
+   console.log(data) // process response... 
+});
