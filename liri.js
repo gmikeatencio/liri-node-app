@@ -10,8 +10,16 @@
 // Make sure you append each command you run to the log.txt file.
 // Do not overwrite your file each time you run a command.
 
-var keys = require('./keys.js');
-var ombdb = require('./omdb.js');
-var tweets = require('./tweets.js');
-var says = require('./says.js');
-var spotify = require('./spotify.js');
+// var keys = require('./keys.js');
+// var ombdb = require('./omdb.js');
+// var tweets = require('./tweets.js');
+// var says = require('./says.js');
+var spot = require('./spotSearch.js');
+var nodeArgs = process.argv;
+
+if (nodeArgs[2] === 'spotify-this-song'){
+	var query = nodeArgs[3]
+	spot.spotSearch(query);
+} 
+
+
